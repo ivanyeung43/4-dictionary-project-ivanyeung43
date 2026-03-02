@@ -1,4 +1,4 @@
-item = [
+""" item = [
     {
         "name": "RADEON XFX SWIFT RX 9070XT", 
         "price": 829.99, 
@@ -20,16 +20,9 @@ item = [
 for index, item in enumerate(item):
     print(index, ":", item["name"])
 
-user_purchase = input("Select one item to purchase")
+user_purchase = int(input("Select one item to purchase")) """
 
-if user_purchase == "0":
-    item[0]["name"]["price"]
-elif user_purchase == "1":
-    item[1]["name"]["price"]
-elif user_purchase == "2":
-    item[2]["name"]["price"]
-else:
-    print("Select 0, 1 or 2")
+
 
 
 """ # Practice Assessment
@@ -42,5 +35,31 @@ def occupied(x,y,t):
             found += 1
     print(found)
             
-occupied(5,[e,c,c,c,c], [c,c,c,c,e])
- """
+occupied(5,[e,c,c,c,c], [c,c,c,c,e]) """
+
+
+# Practice Asssessment #2
+
+t = "t"
+s = "s" 
+
+
+def language(x):
+    t_count = 0
+    s_count = 0
+    for i in range(len(x)):
+        if (x[i]).lower() == t:
+            t_count += 1
+        elif (x[i]).lower() == s:
+            s_count +=1
+    if t_count > s_count:
+        print("Enlgish")
+    elif t_count == s_count:
+        print("French")
+    else:
+        print("French")
+
+language("This T t  tttttt")
+        
+
+
