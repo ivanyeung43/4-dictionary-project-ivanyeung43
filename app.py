@@ -66,19 +66,17 @@ language("This T t  tttttt") """
 
 
 #Practice Test #3
-h = "H"
-o = "O"
-n = "N"
-i = "I"
-
-def track(x):
+h = "h"
+o = "o"
+n = "n"
+i = "i"
+def honi_track(sent):
+    x = sent.split()
     honi_amount = 0
-    y = x.split
+    search_term = h
+    for letter in range(len(x)):
+        if x[letter] == search_term:
+            honi_amount += 0.25
 
-    for i in range(len(y)):
-        if (y[i]) == h :
-
-            
-
-
-track("HHHOONNII")
+    print(honi_amount)
+honi_track("HONI")
