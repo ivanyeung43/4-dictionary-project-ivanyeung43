@@ -1,12 +1,12 @@
-""" item = [
+items = [
     {
         "name": "RADEON XFX SWIFT RX 9070XT", 
-        "price": "$729.99", 
+        "price": "$749.99", 
         "description": "325mm LENGTH," "16GB VRAM" "COLOR:BLACK/WHITE"
     },
     {
         "name": "NVIDIA FOUNDERS EDITION RTX 5070TI",
-        "price": "$749.99",
+        "price": "$849.99",
         "description": "305mm LENGTH," "16GB VRAM"  "COLOR:BLACK"
     },
     {
@@ -16,13 +16,18 @@
     },
 ]
 
-
-for index, item in enumerate(item):
-    print(index, ":", item["price"])
-
+for index, items in enumerate(items):
+    print(index, ":", items["name"])
 
 user_purchase = int(input("Select one item to purchase"))
- """
+
+
+if user_purchase == 0:
+    print(items[0]["name"])
+elif user_purchase == 1:
+    print(items[1]["name"])
+elif user_purchase == 2:
+    print(items[2]["name"])
 
 
 
@@ -66,17 +71,19 @@ language("This T t  tttttt") """
 
 
 #Practice Test #3
-h = "h"
-o = "o"
-n = "n"
-i = "i"
-def honi_track(sent):
-    x = sent.split()
-    honi_amount = 0
-    search_term = h
-    for letter in range(len(x)):
-        if x[letter] == search_term:
-            honi_amount += 0.25
 
-    print(honi_amount)
-honi_track("HONI")
+
+""" def honi_track(sent):
+    HONI = ["H", "O", "N", "I"]
+    count = 0
+    state = 0
+    for char in sent:
+        if HONI[state] == char.upper():
+            state += 1
+            if state >= 4:
+                state = 0
+                count += 1
+    print(count)
+
+honi_track("HHHHOOOONNNNIIII") """
+
