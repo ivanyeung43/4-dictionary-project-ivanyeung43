@@ -1,17 +1,17 @@
 items = [
     {
         "name": "RADEON XFX SWIFT RX 9070XT", 
-        "price": "$759.99", 
+        "price": 759.99, 
         "description": "325mm LENGTH," "16GB VRAM" "COLOR:BLACK/WHITE"
     },
     {
         "name": "NVIDIA FOUNDERS EDITION RTX 5070TI",
-        "price": "$849.99",
+        "price": 849.99,
         "description": "305mm LENGTH," "16GB VRAM"  "COLOR:BLACK"
     },
     {
         "name": "GIGBYTE AORUS MASTER 5080",
-        "price": "$1199.99",
+        "price": 1199.99,
         "description": "360mm LENGTH, 16GB VRAM, COLOR:BLACK"
     },
 ]
@@ -20,8 +20,10 @@ for index, item in enumerate(items):
     print(index, ":", item["name"])
 shop = ""
 cart = []
-user_purchase = int(input("Select one item to purchase: Type Checkout to end shopping"))
+
 while shop != "Checkout":
+    user_purchase = int(input("Select one item to purchase: Type Checkout to end shopping"))
+    
     if user_purchase == 0:
         print(items[0]["name"])
         cart.append(items[0]["name"])
