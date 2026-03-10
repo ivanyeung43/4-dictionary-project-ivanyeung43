@@ -22,20 +22,25 @@ shop = ""
 cart = []
 
 while shop != "Checkout":
-    user_purchase = int(input("Select one item to purchase: Type Checkout to end shopping"))
-    
-    if user_purchase == 0:
+    user_purchase = input("Select one item to purchase: Type Checkout to end shopping")
+    total = 0
+    if user_purchase == "Checkout":
+        print(cart)
+        print(total)
+    elif int(user_purchase) == 0:
         print(items[0]["name"])
         cart.append(items[0]["name"])
-    elif user_purchase == 1:
+        total += items[0]["price"]
+    elif int(user_purchase) == 1:
         print(items[1]["name"])
+        total += items[1]["price"]
         cart.append(items[1]["name"])
-    elif user_purchase == 2:
+    elif int(user_purchase) == 2:
         print(items[2]["name"])
         cart.append(items[2]["name"])
-    print(cart)
+        total += items[2]["price"]
 print("Shopping has ended")
-print(cart)
+
 
 
 
