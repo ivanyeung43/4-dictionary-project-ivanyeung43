@@ -1,4 +1,4 @@
-items = [
+GPUs = [
     {
         "name": "RADEON XFX SWIFT RX 9070XT", 
         "price": 759.99, 
@@ -16,29 +16,28 @@ items = [
     },
 ]
 
-for index, item in enumerate(items):
+for index, item in enumerate(GPUs):
     print(index, ":", item["name"])
 shop = ""
 cart = []
-
+total = 0
 while shop != "Checkout":
     user_purchase = input("Select one item to purchase: Type Checkout to end shopping")
-    total = 0
     if user_purchase == "Checkout":
         print(cart)
         print(total)
     elif int(user_purchase) == 0:
-        print(items[0]["name"])
-        cart.append(items[0]["name"])
-        total += items[0]["price"]
+        print(GPUs[0]["name"])
+        cart.append(GPUs[0]["name"])
+        total += GPUs[0]["price"]
     elif int(user_purchase) == 1:
-        print(items[1]["name"])
-        total += items[1]["price"]
-        cart.append(items[1]["name"])
+        print(GPUs[1]["name"])
+        cart.append(GPUs[1]["name"])
+        total += GPUs[1]["price"]
     elif int(user_purchase) == 2:
-        print(items[2]["name"])
-        cart.append(items[2]["name"])
-        total += items[2]["price"]
+        print(GPUs[2]["name"])
+        cart.append(GPUs[2]["name"])
+        total += GPUs[2]["price"]
 print("Shopping has ended")
 
 
