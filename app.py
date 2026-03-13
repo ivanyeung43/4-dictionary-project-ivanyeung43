@@ -105,18 +105,18 @@ def slot_m(q,m1,m2,m3):
     m2_played = 0
     m3_played = 0
     while q > 0:
-        q-=1
+        q-1
         m1_played += 1
         if m1_played + m1 == 35:
             q+=30
-        q-=1
+        q-1
         m2_played += 1
         if m2_played + m2 == 100:
-            q += 60
-        q-=1
+            q +=60
+        q-1
         m3_played += 1
         if m3_played + m3 == 10:
-            q += 9
+            q +=9
         x = m1_played + m2_played + m3_played
 
     print(f"Martha plays {x} times before going broke")
