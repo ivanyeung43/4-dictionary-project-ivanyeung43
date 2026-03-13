@@ -1,4 +1,4 @@
-""" GPUs = [
+GPUs = [
     {
         "name": "RADEON XFX SWIFT RX 9070XT", 
         "price": 759.99, 
@@ -38,7 +38,7 @@ while shop != "Checkout":
         print(GPUs[2]["name"])
         cart.append(GPUs[2]["name"])
         total += GPUs[2]["price"]
-print("Shopping has ended") """
+print("Shopping has ended") 
 
 
 
@@ -100,24 +100,36 @@ language("This T t  tttttt") """
 honi_track("HHHHOOOONNNNIIII") """
 
 
-def slot_m(q,m1,m2,m3):
-    m1_played = 0
-    m2_played = 0
-    m3_played = 0
+""" def slot_m(q,m1,m2,m3):
+    m1_played = m1
+    m2_played = m2
+    m3_played = m3
     while q > 0:
-        q-1
+        q-=1
         m1_played += 1
-        if m1_played + m1 == 35:
-            q+=30
-        q-1
+        if q==0:
+            break
+        if m1_played%35 == 0:
+            q += 30
+        
+        q-=1
         m2_played += 1
-        if m2_played + m2 == 100:
-            q +=60
-        q-1
+        if q==0:
+            break
+        if m2_played%100 == 0:
+            q += 60
+
+        q-=1
         m3_played += 1
-        if m3_played + m3 == 10:
-            q +=9
-        x = m1_played + m2_played + m3_played
+        if q==0:
+            break
+        if m3_played%10 == 0:
+            q += 9
+
+        x = m1_played-m1 + m2_played-m2 + m3_played-m3
 
     print(f"Martha plays {x} times before going broke")
-slot_m(77, 4, 9, 3)
+
+slot_m(77,4,9,3) """
+
+
